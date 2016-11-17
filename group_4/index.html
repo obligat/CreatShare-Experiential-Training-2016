@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     <title>running-togather</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
 
 
-
 </head>
 <body>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+   </script>
 
 <header>
     <div>
@@ -22,10 +24,18 @@
         </div>
         <div class="nav">
             <ul>
-                <li> <a href="rank.html" >排行榜</a></li>
-                <li ><a  href="index.html">约跑</a></li>
-                <li><a href="userinfo.html" >个人资料</a></li>
-                <li><a href="creatshare.html" >联系CreatShare</a></li>
+                <a href="rank.html">
+                    <li> 排行榜</li>
+                </a>
+                <a href="index.html">
+                    <li>约跑</li>
+                </a></li>
+                <a href="userinfo.html">
+                    <li>个人资料</li>
+                </a>
+                <a href="creatshare.html">
+                    <li>联系cccccccccccc</li>
+                </a>
             </ul>
         </div>
     </div>
@@ -34,16 +44,19 @@
 
     <div>
         <div>
-            <div id="card">
-                <div class="portrait">
+            <div class="card">
+                <div>
                     <img src="images/portrait.png" alt="portrait">
                 </div>
-                <div class="content">
-                    <span>用户A<img src="images/female.png"></span>
+
+                <div >
+                    <span>用户A<img  class="thumbnail" src="images/female.png"></span>
                     <p>地点，时间，对同伴的要求。</p>
                 </div>
-                <div class="time">
-                    <span>2016/11/5/23：04</span>
+                <div  id="time">
+                    <script>
+                        document.getElementById('time').innerHTML = new Date().toLocaleDateString() + "</br>" + new Date().toLocaleTimeString();
+                    </script>
                 </div>
             </div>
         </div>
